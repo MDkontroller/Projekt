@@ -2,7 +2,7 @@
 
 Projekt Repository, 
 
-Hier könnt ihr gerne sowie HW und SW Beiträge hinzüfugen...
+Hier könnt ihr gern sowie HW als SW Beiträge hinzüfugen...
 
 Nicolas
 
