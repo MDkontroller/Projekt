@@ -1,5 +1,5 @@
 ##
-## Commad shell für der Inbetriebnahme des GPS-Sensor unter ROS
+## Command shell für der Inbetriebnahme des GPS-Sensor unter ROS
 ##
 
 ## geht mal im Path wo beginner tutorials package kreiert wurde,
@@ -28,13 +28,13 @@ catkin_make
 source devel/setup.bash
 rosrun ublox_gps ublox_gps 
 
-# if not running
-# connected to port?
+# if not running, connected to port?
+
 ls /dev/ttyACM0     
 
 # Adding user to group...
 groups 
-sudo adduser nico dialout   # nico oder deiner UBUNTU-USER
+sudo adduser nico dialout   # anstatt nico, deine UBUNTU-USER
 sudo udevadm trigger 
 sudo reboot
 
