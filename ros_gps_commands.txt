@@ -1,0 +1,62 @@
+##
+## Commad shell für der Inbetriebnahme des GPS-Sensor unter ROS
+##
+
+## geht mal im Path wo beginner tutorials package kreiert wurde,
+## innerhalb der Worspace "Catkin_ws"
+
+cd catkin_ws/src
+
+## gps ros-package installieren 
+
+git clone https://github.com/KumarRobotics/ublox.git
+
+## zurück im catkin_ws path 
+
+cd ..
+
+## build catkin_ws
+
+catkin_make
+
+# fehlen noch packages?
+
+sudo apt install ros-noetic-rtcm-msgs 
+sudo dpkg --configure -a  # optional, nur wenn rtcm-msgs nicht installiert wurde
+
+catkin_make 
+source devel/setup.bash
+rosrun ublox_gps ublox_gps 
+
+# if not running
+# connected to port?
+ls /dev/ttyACM0     
+
+# Adding user to group...
+groups 
+sudo adduser nico dialout   # nico oder deiner UBUNTU-USER
+sudo udevadm trigger 
+sudo reboot
+
+# try again
+
+catkin_make 
+source devel/setup.bash
+# GPS-NODES in betribnahme 
+rosrun ublox_gps ublox_gps 
+
+# welche noden in betrieb sind ? 
+
+rosnode list
+
+# topics zur Verfügung?
+
+rostopic list 
+
+# einen bestimtem topic schauen..
+
+rostopic echo ublox_gps <topic>
+
+# end
+
+
