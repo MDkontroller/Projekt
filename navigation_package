@@ -1,0 +1,21 @@
+##
+##   Installation Navigation package und Zusätzlichen Dependencies 
+##
+------------------------------
+
+cd catkin_ws/src
+git clone https://github.com/ros-planning/navigation
+
+cd ~/catkin_ws
+catkin_make 
+
+## nur wenn notwendig: " LISB not avaliable "
+
+sudo apt-get install libsdl-image1.2-dev 
+sudo apt-get install libsdl-dev
+
+sudo apt-get install ros-noetic-tf2-sensor-msgs
+
+catkin_make
+
+## voila!
