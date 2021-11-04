@@ -1,0 +1,14 @@
+
+cd /catkin_ws/src
+git clone https://github.com/danielsnider/gps_goal
+
+# installing necessary python package
+
+pip install geographiclib
+
+
+cd ~/catkin_ws
+catkin_make 
+
+# fertig
+
